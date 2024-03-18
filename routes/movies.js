@@ -1,8 +1,7 @@
 import { Router } from "express";
 import { MovieController } from "../controllers/movies.js";
 
-const router = Router()
-export const moviesRouter = readJSON('./movies.json')
+export const moviesRouter = Router()
 
 moviesRouter.get('/', MovieController.getAll)
 moviesRouter.get('/:id', MovieController.getById)
